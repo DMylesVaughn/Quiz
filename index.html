@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Quiz</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <header>
+        <button id="highscore" type="button">View Highscores</button>
+        <h1>Time: <span id="timer">60</span></h1>
+    </header>
+    <!-- what you see when loading page -->
+    <div id="startbox">
+        <h2>Welcome to your Javascript Quiz!</h2>
+        <p>You will have 1 minute to complete 10 questions. Be aware if you answer a question wrong, you will lose 3
+            seconds. Good luck!</p>
+        <button id="start">Start</button>
+    </div>
+<!-- where all my questions and answers are placed during quiz -->
+    <div id="QuestionBox" class="hide">
+        <h2 id="Question">Question</h2>
+        <ul>
+            <li><button id="answer1">Answer 1</button></li>
+            <li><button id="answer2">Answer 2</button></li>
+            <li><button id="answer3">Answer 3</button></li>
+            <li><button id="answer4">Answer 4</button></li>
+        </ul>
+    </div>
+<!-- at end of quiz this div is viviable with scorebox -->
+    <div id="scorebox" class="hide">
+        <nav id="scoresubmit">
+            <h1 id="score">Score</h1>
+            <h1 id="time">Time</h1>
+            <input type="text" placeholder="Initials" id="initials">
+            <button id="submit">Submit</button>
+        </nav>
+        <nav id="leaderboard">
+            <ol id="ranks"></ol>
+
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+h1{
+    font-size: 15px;
+    color: blueviolet;
+}
+/* highscoree button */
+#highscore{
+    border: 0px;
+    color: blueviolet;
+    font-weight: bold;
+    background-color:aliceblue;
+}
+#highscore:hover{
+    border: 2px;
+    border-style: solid;
+    border-color: blueviolet;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+/* box with start button and quiz description inh the begining */
+#startbox{
+    display: inline-block;
+    flex-direction: column;
+    margin-top: 200px;
+    margin-left: 50px;
+    border: 4px;
+    border-style: solid;
+    border-color: blueviolet;
+    border-radius: 5px;
+    width: 500px; 
+}
+#start{
+    margin-left: 220px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border-color: blueviolet;
+    border-radius: 5px;
+    background-color:aliceblue;
+}
+#start:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px;
+}
+/* box that holds the questions and answers */
+#QuestionBox{
+    margin-top: 200px;
+    margin-left: 50px;
+    border: 4px;
+    border-style: solid;
+    border-color: blueviolet;
+    border-radius: 5px;
+    width: 700px;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 20px;
+    border-bottom: 2px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-color: black;
+    border-style: solid;
+}
+ul{
+    list-style: none;
+}
+/* leaderboard */
+#ranks li{
+    background-color:aliceblue;
+    border-bottom: 1px;
+    border-left: 2px;
+    border-top: 1px;
+    border-right: 2px;
+    border-style: solid;
+    padding: 5px;
+    border-color:rgb(133, 25, 25);
+    font-size: 18px;
+    width: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.hide{
+    display:none
+}
+li button{
+    margin-top: 10px;
+    font-size: 16px;
+    border-color: turquoise;
+    background-color:aliceblue;
+    border-radius: 5px;
+}
+li button:hover{
+    background-color: bisque;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+/* box at the end of the game to submit your score and initials */
+#scorebox{
+    flex-direction: column;
+    margin-top: 200px;
+    margin-left: 50px;
+    border: 4px;
+    border-style: solid;
+    border-color: blueviolet;
+    border-radius: 5px;
+    width: 500px; 
+}
+#initials{
+    margin: 10px;
+}
+#score{
+    margin: 10px;
+    font-size: 20px;
+}
+#time{
+    margin: 10px;
+    font-size: 20px;
+}
+#submit{
+    border-color: turquoise;
+    background-color:aliceblue;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#submit:hover{
+    transform: scale(1.1);
+}

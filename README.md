@@ -41,11 +41,12 @@ This was tested using Live Terminal in VSCode.
 * ![LaunchPage](https://github.com/DMylesVaughn/Quiz/blob/main/assets/images/LaunchPage.png)
 * ![Correct Question](https://github.com/DMylesVaughn/Quiz/blob/main/assets/images/QuestionCorrect.png)
 * ![WrongQuestion](https://github.com/DMylesVaughn/Quiz/blob/main/assets/images/QuestionWrong.png)
+* ![TimeOut](https://github.com/DMylesVaughn/Quiz/blob/main/assets/images/TimeOut.png)
 * ![HighScores](https://github.com/DMylesVaughn/Quiz/blob/main/assets/images/HighScores.png)
 
 # Code
 * https://github.com/DMylesVaughn/Quiz
-* https://dmylesvaughn.github.io/README_Generator/
+* https://dmylesvaughn.github.io/Quiz/
 
 # Contact Information 
 * GitHub Username: DMylesVaughn

@@ -14,7 +14,8 @@ var answer4box = document.getElementById("answer4")
 answer4box.addEventListener("click", chooseanswer)
 var startbox = document.getElementById("startbox")
 var scorebox = document.getElementById("scorebox")
-// all my questions and answers
+
+// Questions and answers
 var questions = [
     {
         question: "What is considered a Block statement in Javascript?",
@@ -189,7 +190,8 @@ var questions = [
         ]
     }
 ]
-// timer function 
+
+// Timer 
 var interval
 var timer = 60
 function startTimer() {
@@ -203,7 +205,8 @@ function startTimer() {
         }
     }, 1000);
 }
-// show scorews when you click highscores
+
+// Shows scores
 var highscoresbutton = document.getElementById("highscore")
 highscoresbutton.addEventListener("click", showscores)
 function showscores(){
@@ -213,7 +216,8 @@ function showscores(){
     init();
     displayranks();
 }
-// button to start quiz
+
+// Button to start quiz
 var startbutton = document.getElementById("start")
 startbutton.addEventListener("click", start)
 function start() {
@@ -225,7 +229,8 @@ function start() {
     document.getElementById("startbox").setAttribute("style", "display:none")
     setquestion()
 }
-// next questions when you answer a question
+
+// Next questions queue
 function setquestion() {
     questionel.innerText = questions[questionindex].question
     for (let index = 0; index < questions[questionindex].answers.length; index++) {
@@ -237,7 +242,7 @@ function setquestion() {
         } answerbox.dataset.correct = questions[questionindex].answers[index].correct
     }
 }
-// if your right you get 10 points, if not you lose 3 seconds
+// Scoring and penalty method
 function chooseanswer(event) {
     var correct = event.target.dataset.correct
     if (correct === "true") {
@@ -253,56 +258,65 @@ function chooseanswer(event) {
         setquestion()
     }
 }
-// ends the quiz to the scorebox
+
+// Ends quiz, calls scorebox
 function end() {
     clearInterval(interval);
     if (questionindex >= questions.length - 1) {
         QuestionBox.classList.add("hide")
         scorebox.classList.remove("hide")
-        // endtimer.classList.add("hide")
         document.getElementById("score").innerText = "Score: " + score
         document.getElementById("time").innerText = "Time Remaining: " + timer + " sec"
     }
 }
-// ends quiz when timer hits 0
+
+// Ends quiz when timer=0
 var allscores = [];
-function savescore(){
-    // get all the existing data
-    // push the new value to the existing data
-    // save to local storage
-    var initials = document.getElementById("initials").value
-    var score = document.getElementById("score").textContent
-    var userscore ={
+function savescore() {
+    var initials = document.getElementById("initials").value;
+    var scoreValue = parseInt(document.getElementById("score").textContent); // Parse score to an integer
+    var userscore = {
         initials,
-        score
+        score: scoreValue // Store the score as an integer
     };
-    
-// sort the rankings by score    
-allscores.sort((a, b)=>{
-    return b.score - a.score;
-});
-    
-    allscores.push(userscore)
-    localStorage.setItem("userscore",  JSON.stringify(allscores))
+
+    // Add the new score to the array
+    allscores.push(userscore);
+
+    // Sort the scores by score value in descending order
+    allscores.sort((a, b) => {
+        return b.score - a.score;
+    });
+
+    // Limit to the top 10 scores
+    allscores = allscores.slice(0, 10);
+
+    // Save the updated scores to local storage
+    localStorage.setItem("userscore", JSON.stringify(allscores));
 }
 
-
-// displays scores in leaderboard
-function displayranks(){
+// Display scores
+function displayranks() {
     leaderboard.innerHTML = "";
 
+    // Sort the scores by score value in descending order
+    allscores.sort((a, b) => {
+        return b.score - a.score;
+    });
 
+    // Limit to displaying the top 10 scores
+    var numScoresToDisplay = Math.min(10, allscores.length);
 
-    for (var i=0; i < allscores.length; i++){
+    for (var i = 0; i < numScoresToDisplay; i++) {
         var currentScore = allscores[i].initials + ": " + allscores[i].score;
 
         var li = document.createElement("li");
         li.textContent = currentScore;
         li.setAttribute("data-index", i);
 
-
         leaderboard.appendChild(li);
     }
+    console.log(allscores);
 }
 function init(){
     var storedscores =  JSON.parse(localStorage.getItem("userscore")) || [];
@@ -315,4 +329,5 @@ function submitscore() {
     init();
     savescore();
     displayranks();
+    console.log(allscores);
 }

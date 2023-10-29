@@ -38,8 +38,10 @@ Download the source code and add questions, change appearance, or add/remove fun
 This was tested using Live Terminal in VSCode.
 
 # ScreenShots
-* ![Preview](https://github.com/DMylesVaughn/README_Generator/blob/main/Develop/Images/Preview.png)
-* ![Terminal Screenshot](https://github.com/DMylesVaughn/README_Generator/blob/main/Develop/Images/TerminalScreenshot.png)
+* ![LaunchPage](https://github.com/DMylesVaughn/Quiz/blob/main/assets/images/LaunchPage.png)
+* ![Correct Question](https://github.com/DMylesVaughn/Quiz/blob/main/assets/images/QuestionCorrect.png)
+* ![WrongQuestion](https://github.com/DMylesVaughn/Quiz/blob/main/assets/images/QuestionWrong.png)
+* ![HighScores](https://github.com/DMylesVaughn/Quiz/blob/main/assets/images/HighScores.png)
 
 # Code
 * https://github.com/DMylesVaughn/Quiz

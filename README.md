@@ -4,12 +4,12 @@ A timed quiz on Javascript fundamentals that tracks high scores.
 # Table of Contents 
 * [User Story](#User-Story)
 * [Acceptance Criteria](#Acceptance-Criteria)
-* [Usage](#-Usage)
-* [Contributing](#-Contributing)
-* [Tests](#-Tests)
-* [Screen Shots](#-ScreenShots)
-* [Code Location](#-Code)
-* [Questions](#-Contact-Information)
+* [Usage](#Usage)
+* [Contributing](#Contributing)
+* [Tests](#Tests)
+* [Screen Shots](#ScreenShots)
+* [Code Location](#Code)
+* [Questions](#Contact-Information)
 # User Story
 AS A coding boot camp student
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
